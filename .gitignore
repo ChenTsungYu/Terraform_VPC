@@ -1,0 +1,10 @@
+# complie output
+/dist
+/temp
+
+# dependencies
+# terraform exclude
+/vpc1/aws_key_pair/*pem
+*.tfstate
+*.tfstate.backup
+.terraform/
