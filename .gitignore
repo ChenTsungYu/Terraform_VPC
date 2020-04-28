@@ -4,7 +4,7 @@
 
 # dependencies
 # terraform exclude
-/vpc1/aws_key_pair/*pem
+/vpc1/aws_key_pair
 *.tfstate
 *.tfstate.backup
 .terraform/
