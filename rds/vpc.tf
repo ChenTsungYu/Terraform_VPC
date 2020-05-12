@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = "true"
   enable_classiclink   = "false"
   tags = {
-    Name = "main"
+    Owner = "tom"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "main-public-1" {
   availability_zone       = "us-east-2a"
 
   tags = {
-    Name = "main-public-1"
+    Name = "tom-main-public-1"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "main-public-2" {
   availability_zone       = "us-east-2b"
 
   tags = {
-    Name = "main-public-2"
+    Name = "tom-main-public-2"
   }
 }
 
@@ -40,7 +40,7 @@ resource "aws_subnet" "main-public-3" {
   availability_zone       = "us-east-2c"
 
   tags = {
-    Name = "main-public-3"
+    Name = "tom-main-public-3"
   }
 }
 
@@ -51,7 +51,7 @@ resource "aws_subnet" "main-private-1" {
   availability_zone       = "us-east-2a"
 
   tags = {
-    Name = "main-private-1"
+    Name = "tom-main-private-1"
   }
 }
 
@@ -62,7 +62,7 @@ resource "aws_subnet" "main-private-2" {
   availability_zone       = "us-east-2b"
 
   tags = {
-    Name = "main-private-2"
+    Name = "tom-main-private-2"
   }
 }
 
@@ -73,7 +73,7 @@ resource "aws_subnet" "main-private-3" {
   availability_zone       = "us-east-2c"
 
   tags = {
-    Name = "main-private-3"
+    Name = "tom-main-private-3"
   }
 }
 
@@ -82,7 +82,7 @@ resource "aws_internet_gateway" "main-gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "main"
+    Owner = "tom"
   }
 }
 
@@ -95,7 +95,7 @@ resource "aws_route_table" "main-public" {
   }
 
   tags = {
-    Name = "main-public-1"
+    Name = "tom-main-public-1"
   }
 }
 

@@ -28,7 +28,7 @@ resource "aws_security_group" "http_server_sg" {
 resource "aws_security_group" "allow_mysqldb" {
   vpc_id = aws_vpc.main.id
   name        = "sg_mysqldb"
-  description = "允許mysql連接"
+  description = "allow mysql connection"
   ingress { // 3306 為mysql defalt port
     from_port       = 3306
     to_port         = 3306

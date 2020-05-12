@@ -6,7 +6,7 @@ resource "aws_db_subnet_group" "subnet_mysql" {
 }
 // database parameter
 resource "aws_db_parameter_group" "mysql_parameter" {
-  name   = "parameters_mysql"
+  name   = "parameters-mysql" // 命名禁止用 "_" ，可用 "-"替代
   family = "mysql5.7"
   description = "MySQL parameter group"
   parameter {
