@@ -26,7 +26,7 @@ resource "aws_instance" "example" {
       # # 印出字串訊息至index.html 檔
       # "echo Welcome to virtual server which is at ${self.public_dns} | sudo tee /var/www/html/index.html", # copy file
      # ===============  Ubuntu OS  ======================== =
-      "sudo apt-get update",
+      "sudo apt-get update -y",
       "sudo apt-get install apache2",
       "sudo apt-get install libapache2-mod-wsgi",
     ]
